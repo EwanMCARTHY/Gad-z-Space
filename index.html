@@ -8,5 +8,21 @@
     <script src="scripts/common_script.js"></script>
 </head>
 <body>
+    <script>
+        fetch('includes/header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('conteneur').innerHTML = data;
+        })
+        .catch(error => console.error('Erreur:', error));
+    </script>
+    <script>
+        fetch('includes/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('conteneur').innerHTML = data;
+        })
+        .catch(error => console.error('Erreur:', error));
+    </script>
 </body>
 </html>
