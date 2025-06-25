@@ -1,0 +1,27 @@
+#top_timeline_container{
+    background-color: #333333;
+    padding: 0 5rem;
+    color: #F0F0F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#top_timeline_container{
+    display: flex;
+    gap: 0;
+    justify-content: left;
+}
+
+.top-timeline-year{
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+    border: 2px solid #37773A;
+}
+
+.top-timeline-connector{
+    height: 2px;
+    background-color: #37773A;
+    width: 5rem;
+}
