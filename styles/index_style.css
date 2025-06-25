@@ -7,21 +7,22 @@
     justify-content: center;
 }
 
-#top_timeline_container{
+#top_timeline{
     display: flex;
     gap: 0;
     justify-content: left;
 }
 
-.top-timeline-year{
-    font-size: 2rem;
+.top_timeline_year{
+    font-size: 1.5rem;
     text-align: center;
-    padding: 1rem;
-    border: 2px solid #37773A;
+    padding: 0.5rem;
+    border: 5px solid #37773A;
+    border-radius: 10px;
 }
 
-.top-timeline-connector{
-    height: 2px;
+.top_timeline_connector{
+    height: 5px;
     background-color: #37773A;
-    width: 5rem;
+    width: 10rem;
 }
