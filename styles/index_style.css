@@ -17,7 +17,7 @@
 .top_timeline_year{
     font-size: 1.5rem;
     text-align: center;
-    padding: 0.5rem;
+    padding: 1rem;
     border: 5px solid #37773A;
     border-radius: 10px;
     box-shadow: 
@@ -31,7 +31,12 @@
 }
 
 .top_timeline_connector{
-    height: 5px;
+    height: 0px;
     background-color: #37773A;
     width: 10rem;
+    border: 2.5px solid #37773A;
+    box-shadow: 
+        0 0 10px #37773A,
+        0 0 20px #37773A,
+        0 0 40px rgba(55, 119, 58, 0.6);
 }
