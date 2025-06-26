@@ -30,6 +30,11 @@
     cursor: pointer;
 }
 
+.top_timeline_year:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
 .top_timeline_connector{
     height: 0px;
     background-color: #37773A;
