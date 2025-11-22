@@ -1,86 +1,75 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GADZSPACE - Arts et Métiers Lille</title>
-    <meta name="description" content="L'association aérospatiale des étudiants de l'ENSAM Lille. En route vers le C'Space.">
+    <title>GADZSPACE - Association Aérospatiale ENSAM Lille</title>
+    <meta name="description" content="L'association aérospatiale des étudiants de l'ENSAM Lille. Conception de fusées pour le C'Space.">
     
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'gadz-dark': '#0f172a',
-                        'gadz-blue': '#1e3a8a',
-                        'gadz-accent': '#38bdf8', // Cyan néon
-                        'ensam-red': '#b91c1c', // Rappel discret ENSAM
+                        'gadz-dark': '#0f172a', // Fond bleu nuit très sombre
+                        'gadz-accent': '#00ff88', // NOUVEAU : Vert Néon Tech
+                        'gadz-secondary-green': '#10b981', // Vert secondaire pour les dégradés
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         display: ['Orbitron', 'sans-serif'],
                     },
+                    // Image de fond "Hero" (l'espace)
                     backgroundImage: {
-                        'hero-pattern': "linear-gradient(to bottom, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 1)), url('https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=2070&auto=format&fit=crop')",
+                        'hero-pattern': "linear-gradient(to bottom, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 1)), url('https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=2070&auto=format&fit=crop')",
                     }
                 }
             }
         }
     </script>
 
-    <style>
-        /* Animations personnalisées */
-        .gradient-text {
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            background-image: linear-gradient(to right, #38bdf8, #818cf8);
-        }
-        .glass-card {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+
 </head>
-<body class="bg-gadz-dark text-gray-100 font-sans antialiased selection:bg-gadz-accent selection:text-gadz-dark">
+<body class="bg-gadz-dark text-gray-100 font-sans selection:bg-gadz-accent selection:text-gadz-dark">
 
     <nav class="fixed w-full z-50 bg-gadz-dark/80 backdrop-blur-md border-b border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <span class="font-display text-2xl font-bold text-white tracking-wider">GADZ<span class="text-gadz-accent">SPACE</span></span>
-                </div>
+                <a href="#" class="flex items-center gap-3">
+                    <img src="logo.png" alt="Logo GADZSPACE" class="h-10 w-auto object-contain">
+                    
+                    <span class="font-display text-xl font-bold text-white tracking-wider hidden sm:block">GADZ<span class="text-gadz-accent">SPACE</span></span>
+                </a>
+                
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
                         <a href="#accueil" class="hover:text-gadz-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Accueil</a>
                         <a href="#projets" class="hover:text-gadz-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Nos Projets</a>
-                        <a href="#equipe" class="hover:text-gadz-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">L'Équipe</a>
-                        <a href="#contact" class="bg-gadz-accent text-gadz-dark hover:bg-white transition-all px-4 py-2 rounded-full text-sm font-bold">Nous Soutenir</a>
+                        <a href="mailto:contact@gadzspace.com" class="bg-gadz-accent text-gadz-dark hover:bg-white transition-all px-4 py-2 rounded-full text-sm font-bold">Nous Soutenir</a>
                     </div>
                 </div>
+                 <div class="md:hidden text-gadz-accent">Menu</div>
             </div>
         </div>
     </nav>
 
     <section id="accueil" class="relative h-screen flex items-center justify-center bg-hero-pattern bg-cover bg-center bg-no-repeat bg-fixed">
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <div class="inline-block mb-4 px-4 py-1 rounded-full border border-gadz-accent/30 bg-gadz-accent/10 text-gadz-accent text-sm font-semibold tracking-wide uppercase">
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
+            <div class="inline-block mb-6 px-4 py-1 rounded-full border border-gadz-accent/30 bg-gadz-accent/10 text-gadz-accent text-sm font-semibold tracking-wide uppercase">
                 ENSAM Lille
             </div>
             <h1 class="text-5xl md:text-7xl font-display font-black mb-6 tracking-tight leading-tight">
                 Vers l'infini et <br/> <span class="gradient-text">l'innovation</span>
             </h1>
-            <p class="mt-4 text-xl text-gray-300 max-w-2xl mx-auto mb-10">
-                L'association aérospatiale des étudiants des Arts et Métiers. 
+            <p class="mt-4 text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+                L'association aérospatiale des Gadz'Arts de Lille. 
                 Conception, fabrication et lancement de fusées expérimentales au C'Space.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#projets" class="px-8 py-4 bg-gadz-accent text-gadz-dark font-bold rounded-lg shadow-[0_0_20px_rgba(56,189,248,0.5)] hover:shadow-[0_0_30px_rgba(56,189,248,0.8)] hover:scale-105 transition-all duration-300">
+                <a href="#projets" class="px-8 py-4 bg-gadz-accent text-gadz-dark font-bold rounded-lg shadow-[0_0_20px_rgba(0,255,136,0.3)] hover:shadow-[0_0_30px_rgba(0,255,136,0.6)] hover:scale-105 transition-all duration-300">
                     Découvrir nos fusées
                 </a>
                 <a href="mailto:contact@gadzspace.com" class="px-8 py-4 border border-white/30 bg-white/5 backdrop-blur-sm text-white font-bold rounded-lg hover:bg-white/10 transition-all">
@@ -89,109 +78,126 @@
             </div>
         </div>
         
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        <div class="absolute bottom-10 left-1/2 text-white/50 scroll-indicator-bounce">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
         </div>
     </section>
 
-    <section class="py-20 bg-gadz-dark">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section class="py-24 bg-gadz-dark relative overflow-hidden">
+        <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-gadz-accent/20 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">L'Ingénierie au service de l'Espace</h2>
-                    <p class="text-gray-400 mb-4 leading-relaxed">
-                        GADZSPACE réunit des étudiants passionnés de l'ENSAM Lille autour d'un objectif commun : concevoir des vecteurs aérospatiaux performants.
+                    <h2 class="text-3xl md:text-4xl font-display font-bold mb-8">L'Ingénierie "Teckno" au service de l'Espace</h2>
+                    <p class="text-gray-400 mb-6 leading-relaxed text-lg">
+                        GADZSPACE réunit des étudiants passionnés de l'ENSAM Lille autour d'un objectif commun : concevoir des vecteurs aérospatiaux performants en appliquant la rigueur de notre formation.
                     </p>
-                    <p class="text-gray-400 mb-6 leading-relaxed">
-                        Nous appliquons la méthodologie Arts et Métiers ("Teckno") à des projets concrets : aérodynamisme, propulsion, électronique embarquée et récupération. Notre but ultime est la campagne nationale de lancement C'Space organisée par le CNES.
-                    </p>
-                    <ul class="space-y-3 text-gray-300">
-                        <li class="flex items-center"><span class="text-gadz-accent mr-2">✓</span> Participation au C'Space</li>
-                        <li class="flex items-center"><span class="text-gadz-accent mr-2">✓</span> Projets Mini-Fusées & Fusées Expérimentales</li>
-                        <li class="flex items-center"><span class="text-gadz-accent mr-2">✓</span> Vulgarisation scientifique</li>
+                   
+                    <ul class="space-y-4 text-gray-300 mt-8">
+                        <li class="flex items-center"><span class="text-gadz-accent mr-3 text-xl">✓</span> Participation au C'Space (CNES)</li>
+                        <li class="flex items-center"><span class="text-gadz-accent mr-3 text-xl">✓</span> Fusées Expérimentales & Mini-Fusées</li>
+                        <li class="flex items-center"><span class="text-gadz-accent mr-3 text-xl">✓</span> R&D Électronique et Mécanique</li>
                     </ul>
                 </div>
-                <div class="relative">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-gadz-accent to-blue-600 rounded-lg blur opacity-25"></div>
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-gadz-accent to-gadz-secondary-green rounded-xl blur opacity-30 group-hover:opacity-70 transition duration-500"></div>
                     
-                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=2070&auto=format&fit=crop" alt="Atelier Gadzspace" class="relative rounded-lg shadow-2xl border border-white/10 grayscale hover:grayscale-0 transition-all duration-500">
+                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=2070&auto=format&fit=crop" alt="Atelier Gadzspace" class="relative rounded-xl shadow-2xl border border-white/10 grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-[1.01]">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projets" class="py-20 bg-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projets" class="py-24 bg-slate-900/50 relative">
+         <div class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-gadz-accent/10 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">Nos Vecteurs</h2>
-                <p class="text-gray-400">De la conception CAO au pas de tir.</p>
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">Nos Vecteurs & Projets</h2>
+                <p class="text-gray-400 max-w-xl mx-auto">De la CAO sur CATIA jusqu'au pas de tir de Biscarrosse.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="glass-card rounded-xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 group">
-                    <div class="h-48 bg-gray-800 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-gadz-blue/20 group-hover:bg-transparent transition-all z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?q=80&w=2070&auto=format&fit=crop" alt="Fusée 1" class="w-full h-full object-cover">
+                <div class="glass-card rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 group shadow-lg">
+                    <div class="h-56 bg-gray-800 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-gadz-accent/0 group-hover:bg-gadz-accent/10 transition-all z-10 duration-300"></div>
+                        <img src="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?q=80&w=2070&auto=format&fit=crop" alt="Fusée Expérimentale" class="w-full h-full object-cover transform group-hover:scale-110 transition-all duration-500">
                     </div>
-                    <div class="p-6">
-                        <div class="text-gadz-accent text-xs font-bold uppercase tracking-wider mb-2">Fusée Expérimentale</div>
-                        <h3 class="text-xl font-bold text-white mb-2">Projet ALPHA</h3>
-                        <p class="text-gray-400 text-sm mb-4">Notre fusée expérimentale phare pour le prochain C'Space. Embarque une expérience de mesure atmosphérique.</p>
-                        <a href="#" class="text-white text-sm font-semibold border-b border-gadz-accent pb-1 hover:text-gadz-accent transition-colors">Voir les détails &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="glass-card rounded-xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 group">
-                    <div class="h-48 bg-gray-800 overflow-hidden relative">
-                         <div class="absolute inset-0 bg-gadz-blue/20 group-hover:bg-transparent transition-all z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1457364887197-9150188c107b?q=80&w=2070&auto=format&fit=crop" alt="Fusée 2" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="text-gadz-accent text-xs font-bold uppercase tracking-wider mb-2">Mini-Fusée</div>
-                        <h3 class="text-xl font-bold text-white mb-2">Initiation I</h3>
-                        <p class="text-gray-400 text-sm mb-4">Projet destiné aux étudiants de 1ère année pour appréhender les bases de la stabilité et de la propulsion.</p>
-                        <a href="#" class="text-white text-sm font-semibold border-b border-gadz-accent pb-1 hover:text-gadz-accent transition-colors">Voir les détails &rarr;</a>
+                    <div class="p-8 relative">
+                        <div class="text-gadz-accent text-xs font-bold uppercase tracking-wider mb-3">Fusée Expérimentale</div>
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-gadz-accent transition-colors">Projet ALPHA</h3>
+                        <p class="text-gray-400 mb-6 leading-relaxed">Notre fusée phare pour le C'Space. 2m50, apogée prévue à 1500m. Embarque une expérience de mesure de pression.</p>
+                        <a href="#" class="inline-flex items-center text-white font-semibold group-hover:text-gadz-accent transition-colors">
+                            En savoir plus 
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                        </a>
                     </div>
                 </div>
 
-                <div class="glass-card rounded-xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 group">
-                    <div class="h-48 bg-gray-800 overflow-hidden relative">
-                         <div class="absolute inset-0 bg-gadz-blue/20 group-hover:bg-transparent transition-all z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1517420704952-d9f3971d7fde?q=80&w=2070&auto=format&fit=crop" alt="CanSat" class="w-full h-full object-cover">
+                <div class="glass-card rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 group shadow-lg">
+                    <div class="h-56 bg-gray-800 overflow-hidden relative">
+                         <div class="absolute inset-0 bg-gadz-accent/0 group-hover:bg-gadz-accent/10 transition-all z-10 duration-300"></div>
+                        <img src="https://images.unsplash.com/photo-1457364887197-9150188c107b?q=80&w=2070&auto=format&fit=crop" alt="Mini Fusée" class="w-full h-full object-cover transform group-hover:scale-110 transition-all duration-500">
                     </div>
-                    <div class="p-6">
-                        <div class="text-gadz-accent text-xs font-bold uppercase tracking-wider mb-2">R&D</div>
-                        <h3 class="text-xl font-bold text-white mb-2">Système de Récupération</h3>
-                        <p class="text-gray-400 text-sm mb-4">Développement d'un système de parachute double étage commandé par altimètre barométrique.</p>
-                        <a href="#" class="text-white text-sm font-semibold border-b border-gadz-accent pb-1 hover:text-gadz-accent transition-colors">Voir les détails &rarr;</a>
+                    <div class="p-8">
+                        <div class="text-gadz-accent text-xs font-bold uppercase tracking-wider mb-3">Mini-Fusée</div>
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-gadz-accent transition-colors">Initiation P1</h3>
+                        <p class="text-gray-400 mb-6 leading-relaxed">Projet destiné aux étudiants de 1ère année pour appréhender les bases : stabilité, propulsion propulseur C, et récupération.</p>
+                        <a href="#" class="inline-flex items-center text-white font-semibold group-hover:text-gadz-accent transition-colors">
+                            En savoir plus 
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 group shadow-lg">
+                    <div class="h-56 bg-gray-800 overflow-hidden relative">
+                         <div class="absolute inset-0 bg-gadz-accent/0 group-hover:bg-gadz-accent/10 transition-all z-10 duration-300"></div>
+                        <img src="https://images.unsplash.com/photo-1517420704952-d9f3971d7fde?q=80&w=2070&auto=format&fit=crop" alt="CanSat R&D" class="w-full h-full object-cover transform group-hover:scale-110 transition-all duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="text-gadz-accent text-xs font-bold uppercase tracking-wider mb-3">R&D & CanSat</div>
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-gadz-accent transition-colors">Systèmes Embarqués</h3>
+                        <p class="text-gray-400 mb-6 leading-relaxed">Développement de nos propres cartes électroniques de vol et systèmes de récupération double étage commandés.</p>
+                        <a href="#" class="inline-flex items-center text-white font-semibold group-hover:text-gadz-accent transition-colors">
+                            En savoir plus 
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-16 border-t border-white/5">
+    <section class="py-20 border-t border-white/5 bg-gadz-dark">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-sm text-gray-500 uppercase tracking-widest mb-8">Ils nous font confiance</p>
-            <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-                <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/d/df/Logo_Arts_et_M%C3%A9tiers_2021.png/800px-Logo_Arts_et_M%C3%A9tiers_2021.png" class="h-12 md:h-16 object-contain" alt="ENSAM">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Cnes_Logo.svg" class="h-12 md:h-16 object-contain" alt="CNES">
-                <div class="h-12 md:h-16 flex items-center text-2xl font-bold text-white">SOCECE</div>
-                <div class="h-12 md:h-16 flex items-center text-2xl font-bold text-white">AMVALOR</div>
+            <p class="text-sm text-gray-500 uppercase tracking-widest mb-10 font-semibold">Ils soutiennent GADZSPACE</p>
+            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/d/df/Logo_Arts_et_M%C3%A9tiers_2021.png/800px-Logo_Arts_et_M%C3%A9tiers_2021.png" class="h-14 md:h-20 object-contain" alt="ENSAM">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Cnes_Logo.svg" class="h-14 md:h-16 object-contain" alt="CNES">
+                <div class="h-14 flex items-center text-3xl font-display font-bold text-white">AMVALOR</div>
             </div>
         </div>
     </section>
 
     <footer class="bg-black py-12 border-t border-white/10">
         <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-4 md:mb-0">
-                <span class="font-display text-xl font-bold text-white">GADZ<span class="text-gadz-accent">SPACE</span></span>
-                <p class="text-gray-500 text-sm mt-2">© 2024 GADZSPACE - Arts et Métiers Lille.</p>
+            <div class="mb-6 md:mb-0 text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+                     <img src="logo.png" alt="" class="h-8 w-auto grayscale opacity-50">
+                    <span class="font-display text-xl font-bold text-white">GADZ<span class="text-gadz-accent">SPACE</span></span>
+                </div>
+                <p class="text-gray-500 text-sm">© 2024 GADZSPACE - Association étudiante Arts et Métiers Lille.</p>
             </div>
-            <div class="flex space-x-6">
-                <a href="#" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
-                <a href="#" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
-                <a href="mailto:contact@gadzspace.com" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+            <div class="flex space-x-8">
+                <a href="#" class="text-gray-400 hover:text-gadz-accent transition-colors">
+                    <span class="sr-only">Instagram</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.74.01 3.71.054 1.022.046 1.58.215 2.146.435.587.228 1.015.5 1.444.928.429.43.7.857.928 1.444.22.566.389 1.124.435 2.146.044.97.055 1.28.055 3.71s-.01 2.74-.054 3.71c-.046 1.022-.215 1.58-.435 2.146-.228.587-.5 1.015-.928 1.444-.43.429-.857.7-1.444.928-.566.22-1.124.389-2.146.435-.97.044-1.28.055-3.71.055s-2.74-.01-3.71-.054c-1.022-.046-1.58-.215-2.146-.435-.587-.228-1.015-.5-1.444-.928-.429-.43-.7-.857-.928-1.444-.22-.566-.389-1.124-.435-2.146-.044-.97-.055-1.28-.055-3.71s.01-2.74.054-3.71c.046-1.022.215-1.58.435-2.146.228-.587.5-1.015.928-1.444.43-.429.857.7-1.444.928.566-.22 1.124-.389 2.146-.435.97-.044 1.28-.055 3.71-.055zm-1.698.05c-2.43.044-2.73.055-3.68.055-1.055.055-1.535.224-2.025.465-.465.224-.855.515-1.145.805-.29.29-.58.68-.805 1.145-.24.49-.41 1.015-.465 2.025-.044.95-.055 1.25-.055 3.68s.01 2.73.055 3.68c.055 1.055.224 1.535.465 2.025.224.465.515.855.805 1.145.29.29.68.58 1.145.805.49.24 1.015.41 2.025.465.95.044 1.25.055 3.68.055s2.73-.01 3.68-.055c1.055-.055 1.535-.224 2.025-.465.465-.224.855-.515 1.145-.805.29-.29.58-.68.805-1.145.24-.49.41-1.015.465-2.025.044-.95.055-1.25.055-3.68s-.01-2.73-.055-3.68c-.055-1.055-.224-1.535-.465-2.025-.224-.465-.515-.855-.805-1.145-.29-.29-.68-.58-1.145-.805-.49-.24-1.015-.41-2.025-.465-.95-.044-1.25-.055-3.68-.055z" clip-rule="evenodd"></path><path fill-rule="evenodd" d="M12 6.108a5.892 5.892 0 100 11.784 5.892 5.892 0 000-11.784zm0 10a4.108 4.108 0 110-8.216 4.108 4.108 0 010 8.216z" clip-rule="evenodd"></path><path d="M19.148 4.852a1.296 1.296 0 100 2.592 1.296 1.296 0 000-2.592z"></path></svg>
+                </a>
+                <a href="mailto:contact@gadzspace.com" class="text-gray-400 hover:text-gadz-accent transition-colors">
+                    contact@gadzspace.com
+                </a>
             </div>
         </div>
     </footer>

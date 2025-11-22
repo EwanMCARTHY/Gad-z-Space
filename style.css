@@ -1,0 +1,58 @@
+/* =========================================
+   GADZSPACE - Styles Personnalisés
+   ========================================= */
+
+/* Import des Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@500;700;900&display=swap');
+
+/* Configuration de base */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* La couleur de fond et de texte de base sont gérées par Tailwind dans le HTML */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================================
+   Classes Utilitaires Personnalisées
+   ========================================= */
+
+/* Texte en dégradé (Le vert est défini ici pour correspondre 
+   à la config Tailwind du HTML) 
+*/
+.gradient-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    /* Dégradé du vert néon vers un vert un peu plus foncé */
+    background-image: linear-gradient(to right, #00ff88, #10b981);
+}
+
+/* Effet "Glassmorphism" pour les cartes projets
+   Fond semi-transparent + Flou d'arrière-plan + Bordure fine
+*/
+.glass-card {
+    background: rgba(20, 40, 30, 0.7); /* Légère teinte verte dans le fond sombre */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animation simple pour l'indicateur de scroll */
+.scroll-indicator-bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%) translateX(-50%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0) translateX(-50%);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
